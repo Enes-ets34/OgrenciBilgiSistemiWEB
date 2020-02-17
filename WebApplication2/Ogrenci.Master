@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ogrenci.master.cs" Inherits="WebApplication2.Ogrenci" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Öğrenci Bilgi Sistemi</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="Dosyalar1/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper" style="">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Öğrenci Paneli</h3>
+                <strong>BS</strong>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="OgrenciDefault.aspx">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Profilim
+                    </a>
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        Mesajlar
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu3">
+                        <li><a href="OgrenciGelen.aspx"><i class="glyphicon glyphicon-download"></i>Gelen Mesajlar</a></li>
+                        <li><a href="OgrenciGiden.aspx"><i class="glyphicon glyphicon-upload"></i>Giden Mesajlar</a></li>
+
+                        <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            Mesaj Yaz
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu4">
+                            <li><a href="OgrencidenOgretmene.aspx"><i class="glyphicon glyphicon-pencil"></i>Öğretmenin Mesaj Yaz...</a></li>
+                            <li><a href="OgrenciMesajOlustur.aspx"><i class="glyphicon glyphicon-star"></i>Arkadaşına Mesaj Yaz...</a></li>
+                        </ul>
+
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="OgrenciDuyuru.aspx">
+                        <i class="glyphicon glyphicon-bell"></i>
+                        Duyurular
+                    </a>
+                </li>
+                <li>
+                    <a href="OgrenciNotu.aspx">
+                        <i class="glyphicon glyphicon-list"></i>
+                        Sınav Notları
+                    </a>
+                </li>
+                <li>
+                    <a href="Login.aspx">
+                        <i class="glyphicon glyphicon-export"></i>
+                        Çıkış Yap
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="Dosyalar1/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="Dosyalar1/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
