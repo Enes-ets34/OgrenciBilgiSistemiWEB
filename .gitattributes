@@ -2,6 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
+*lingusit-language=JavaScript,CSS,HTML,Bootstrap 4,SQL
 
 ###############################################################################
 # Set default behavior for command prompt diff.
